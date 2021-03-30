@@ -26,7 +26,7 @@ jobs:
       run: flutter pub get
     - name: Build iOS App
       run: |
-       flutter build ios --no-codesign --release --split-debug-info --build-name $RELEASE_VERSION
+       flutter build ios --no-codesign --release --obfuscate --split-debug-info=/grade/debug --build-name $RELEASE_VERSION
        cd build/ios/iphoneos
        mkdir Payload
        cd Payload
